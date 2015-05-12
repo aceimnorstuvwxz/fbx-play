@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+*.xccheckout
+
+lua2d_glfw/lua2d_glfw.xcodeproj/project.xcworkspace/xcshareddata/lua2d_glfw.xccheckout
