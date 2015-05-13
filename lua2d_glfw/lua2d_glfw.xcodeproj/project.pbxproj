@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B50630B51AFF4525005C22F2 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50630B31AFF4525005C22F2 /* Mesh.cpp */; };
+		B52CC7B31B02A48800C3AFB0 /* libfbxsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B52CC7B21B02A48800C3AFB0 /* libfbxsdk.a */; };
+		B52CC7B71B03396500C3AFB0 /* glfbx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52CC7B51B03396500C3AFB0 /* glfbx.cpp */; };
 		B566A0721B01056B00FAB10C /* MeshSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B566A0701B01056B00FAB10C /* MeshSprite.cpp */; };
 		B5F8E1FB1AF367D900A0EA48 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F8E1FA1AF367D900A0EA48 /* OpenGL.framework */; };
 		B5F8E1FD1AF367DF00A0EA48 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F8E1FC1AF367DF00A0EA48 /* IOKit.framework */; };
@@ -78,13 +80,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B5F8E1EE1AF367C100A0EA48 /* CopyFiles */ = {
+		B5F8E1EE1AF367C100A0EA48 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -92,6 +95,9 @@
 /* Begin PBXFileReference section */
 		B50630B31AFF4525005C22F2 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = cppgl/Mesh.cpp; sourceTree = "<group>"; };
 		B50630B41AFF4525005C22F2 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = cppgl/Mesh.h; sourceTree = "<group>"; };
+		B52CC7B21B02A48800C3AFB0 /* libfbxsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfbxsdk.a; path = ../../../../../usr/local/lib/autodesk/libfbxsdk.a; sourceTree = "<group>"; };
+		B52CC7B51B03396500C3AFB0 /* glfbx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = glfbx.cpp; path = glfbx/glfbx.cpp; sourceTree = "<group>"; };
+		B52CC7B61B03396500C3AFB0 /* glfbx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = glfbx.h; path = glfbx/glfbx.h; sourceTree = "<group>"; };
 		B566A0701B01056B00FAB10C /* MeshSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshSprite.cpp; sourceTree = "<group>"; };
 		B566A0711B01056B00FAB10C /* MeshSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshSprite.h; sourceTree = "<group>"; };
 		B5F8E1F01AF367C100A0EA48 /* lua2d_glfw */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lua2d_glfw; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52CC7B31B02A48800C3AFB0 /* libfbxsdk.a in Frameworks */,
 				B5F8E2851AF3713200A0EA48 /* GLUT.framework in Frameworks */,
 				B5F8E2031AF3680800A0EA48 /* libglfw3.a in Frameworks */,
 				B5F8E2011AF367FB00A0EA48 /* Cocoa.framework in Frameworks */,
@@ -259,9 +266,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B52CC7B41B03391200C3AFB0 /* glfbx */ = {
+			isa = PBXGroup;
+			children = (
+				B52CC7B51B03396500C3AFB0 /* glfbx.cpp */,
+				B52CC7B61B03396500C3AFB0 /* glfbx.h */,
+			);
+			name = glfbx;
+			sourceTree = "<group>";
+		};
 		B5F8E1E71AF367C100A0EA48 = {
 			isa = PBXGroup;
 			children = (
+				B52CC7B21B02A48800C3AFB0 /* libfbxsdk.a */,
 				B5F8E2841AF3713200A0EA48 /* GLUT.framework */,
 				B5F8E2021AF3680800A0EA48 /* libglfw3.a */,
 				B5F8E2001AF367FB00A0EA48 /* Cocoa.framework */,
@@ -284,6 +301,7 @@
 		B5F8E1F21AF367C100A0EA48 /* lua2d_glfw */ = {
 			isa = PBXGroup;
 			children = (
+				B52CC7B41B03391200C3AFB0 /* glfbx */,
 				B5F8E2871AF4DCD900A0EA48 /* cppgl */,
 				B5F8E2821AF369E800A0EA48 /* main.cpp */,
 				B5F8E2661AF3692A00A0EA48 /* lua2d */,
@@ -480,7 +498,7 @@
 			buildPhases = (
 				B5F8E1EC1AF367C100A0EA48 /* Sources */,
 				B5F8E1ED1AF367C100A0EA48 /* Frameworks */,
-				B5F8E1EE1AF367C100A0EA48 /* CopyFiles */,
+				B5F8E1EE1AF367C100A0EA48 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -584,6 +602,7 @@
 				B5F8E2FE1AF60E1500A0EA48 /* SOIL.c in Sources */,
 				B5F8E2E71AF5447000A0EA48 /* Program.cpp in Sources */,
 				B5F8E2FD1AF60E1500A0EA48 /* image_helper.c in Sources */,
+				B52CC7B71B03396500C3AFB0 /* glfbx.cpp in Sources */,
 				B5F8E2541AF3690400A0EA48 /* loadlib.c in Sources */,
 				B5F8E3151AF8C71900A0EA48 /* inter.cpp in Sources */,
 				B5F8E2F01AF60D0700A0EA48 /* Image.cpp in Sources */,
@@ -680,7 +699,10 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/lib/autodesk,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -693,7 +715,10 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/lib/autodesk,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
